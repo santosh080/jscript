@@ -1,0 +1,54 @@
+body{
+    margin-top: 30px;
+  background: url("http://2.bp.blogspot.com/-96dUp0NAYkY/Ujg2b7TpvWI/AAAAAAAABTA/3W0QZbMlM8c/s1600/photoshop-new-image-brick-wall-background-free.jpeg") no-repeat center center fixed;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+
+}
+a{
+  font-style: oblique;
+  color: white;
+}
+.search-form{
+    width: 100%;
+    margin: auto;
+    background: #f4f4f4;
+    padding: 0 20px 20px 20px;
+    border: 1px #ccc solid;
+    border-radius: 10px;
+}
+#image{
+  padding: 5px;
+}
+
+img{
+    height : 400px;
+    width: 300px;
+}
+#searchbar{
+  padding-top: 20px;
+}
+#home{
+  height : 100%;
+  width: 80%;
+  text-align: center;
+  align-items: center;
+}
+.thumbnail {
+  height : 50%;
+  width: 80%;
+}
+div .style{
+  background-color: #F2EEB3;
+  padding:5px;
+}
+#search{
+  background-color: #BFAF80;
+  padding: 5px;
+  border-style:1px;
+}
+div #title{
+  padding-right: 20px;
+}
