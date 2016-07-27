@@ -1,0 +1,40 @@
+var calc = require('./calc');
+var http = require('http');
+var url = require("url");
+var server = http.createServer(function (request, response) {
+    response.writeHead(200, { 'Content-Type': 'text/html' });
+    var query = url.parse(request.url, true).query;
+    var mode = query["mode"];
+    var val1 = query["val1"];
+    var val2 = query["val2"];
+    response.write('<!DOCTYPE "html">');
+    response.write('<html>');
+    response.write('<head>');
+    response.write('<title>Hello World Page</title>');
+    response.write('</head>');
+    response.write('<body>');
+    if (mode == "add") {
+        var c = calc.add(val1, val2);
+        response.write(c.toString());
+    } else if (mode == "sub") {
+        var c = calc.sub(val1, val2);
+        response.write(c.toString());
+    } else if (mode == "mult") {
+        var c = calc.mult(val1, val2);
+        response.write(c.toString());
+    } else if (mode == "div") {
+        var c = calc.div(val1, val2);
+        response.write(c.toString());
+    } else if (mode == "mod") {
+        var c = calc.mod(val1, val2);
+        response.write(c.toString());
+    } else {
+        response.write("wrong call");
+    }
+    response.write('</body>');
+    response.write('</html>');
+    response.end();
+});
+​
+server.listen(8080);
+console.log('Server is listening');
